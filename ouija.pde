@@ -35,12 +35,12 @@ textSize (40);
 font = loadFont("SpookyGhoster-Regular-48.vlw");
 font2 = loadFont("AntiqueNo14-Regular-48.vlw");
 
- cursor(curser,mouseX,mouseY);  
+  cursor(curser,mouseX,mouseY);  
  }
  void draw(){
     
    frameRate(3); 
-    background (0);
+    background (#060F0B);
    textAlign (CENTER);
   fill(255);
    textFont(font,70);
@@ -51,16 +51,22 @@ font2 = loadFont("AntiqueNo14-Regular-48.vlw");
    text(b, 300, height/12+30,320, 320);
 
    noStroke();
-    fill(#711D1E);
+    fill(#5D1B1B);
     rect(0,height/3-20,width,height/3*2+50);
 imageMode(CORNER);
 image(Ouija, width/6, height/3-10, 600,397.5);
   frameRate(4);
+
 //first candle 
 
     int image = int(random(0,6));
      imageMode(CENTER);
+
+fill(#091510,88);
+rect(0,height/3-20,width,height/3*2+50); 
+
       image(img, width/5*4+50, 200, 88,165);
+
        fill(255,188,0,88);
 if (image ==0){
   image (flame1,width/5*4+48,135,30,65);
@@ -89,8 +95,7 @@ image (flame6, width/5*4+50,135,30,65);
    
     //image(img, width/5*4+50, 200, 88,165);
      
-   //   fill(255,188,0,88);
-   //ellipse(width/5*4+50,135, 200, 200);
+
  
  //second candle
    int image2 = int(random(0,6));
@@ -121,8 +126,8 @@ if (image2 ==5){
 image (flame6, width/7,375,45,97.5);
    ellipse(width/7-10,367, 260, 250);
 }
-   
- ;
+
+ 
  fill(255);
   textFont(font2,70);
   textAlign (CENTER);
